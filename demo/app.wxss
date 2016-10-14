@@ -1,0 +1,19 @@
+/**app.wxss**/
+page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;}
+
+/*定位*/
+.pr{position: relative;}
+.pa{position: absolute;}
+
+/*文字超出省略*/
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+/*对齐*/
+.tl{text-align: left;}
+.tc{text-align: center;}
+.tr{text-align: right;}

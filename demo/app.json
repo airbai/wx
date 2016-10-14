@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff4049",
+    "navigationBarTitleText": "家居在线",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+    "color":"#fff",
+    "selectedColor":"#1aad16",
+    "backgroundColor":"#000",
+    "list":[
+      {
+        "text":"首页",
+        "pagePath":"pages/index/index",
+        "iconPath":"",
+        "selectedIconPath":""
+      },
+      {
+        "text":"测试",
+        "pagePath":"pages/test/test",
+        "iconPath":"",
+        "selectedIconPath":""
+      }
+    ]
+  }
+}
