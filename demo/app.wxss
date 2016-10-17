@@ -1,5 +1,8 @@
 /**app.wxss**/
-page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;}
+page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: relative;min-height:100%;}
+
+/*宽度*/
+.w{width:18.133rem;margin:0 auto;}
 
 /*定位*/
 .pr{position: relative;}
@@ -17,3 +20,24 @@ page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;}
 .tl{text-align: left;}
 .tc{text-align: center;}
 .tr{text-align: right;}
+
+/*间距*/
+.mt5{margin-top: 0.133rem;}
+.mt10{margin-top: 0.267rem;}
+.mt15{margin-top: 0.4rem;}
+.mt20{margin-top: 0.533rem;}
+.mt25{margin-top: 0.667rem;}
+.mt30{margin-top: 0.8rem;}
+.mt35{margin-top: 0.933rem;}
+.mt40{margin-top: 1.067rem;}
+
+/*背景*/
+.bg_f{background: #fff}
+
+/*边框*/
+.border_t{border-top:solid 1px #eee;}
+.border_b{border-bottom: solid 1px #eee;}
+
+/*footer*/
+.footer_box{height:80px;line-height: 80px;}
+.footer{font-size: 14px;bottom:0;width:20rem;}

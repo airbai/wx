@@ -1,13 +1,13 @@
-<!-- <include src="../_view/loading.wxml"/> -->
+<include src="../_view/loading.wxml"/>
 <view class="banner pr tc">
-    <image class="pic" src="http://i1.carimg.com/0/photo/759/035/000/67357c7a2482d23f.jpg!hmm"></image>
-    <text class="title pa">霓裳妙曼混搭 轻拢慢捻</text>
-    <text class="tag pa">别墅 | 混搭 | 442平米 | 50-80万左右</text>
+    <image class="pic" src="{{data.cover_img}}"></image>
+    <text class="title pa">{{data.subject}}</text>
+    <text class="tag pa">{{data.type_name}} | {{data.style_name}} | {{data.area}}平米 | {{data.price_name}}</text>
 </view>
 <view class="sjs_bar mt35 bg_f border_t border_b">
     <view class="w pr">
-        <image class="pic" src="http://i1.carimg.com/0/photo/759/035/000/67357c7a2482d23f.jpg!hmm"></image>
-        <text class="name pa">李彩琳</text>
+        <image class="pic" src="{{data.designer_face}}"></image>
+        <text class="name pa">{{data.designer_name}}</text>
         <text class="des pa">主任设计师</text>
         <button type="warn" size="mini" bindtap="yuyue" class="btn pa">预约装修</button>
     </view>
@@ -15,17 +15,13 @@
 <view class="detaile bg_f mt35 border_t border_b">
     <view class="linian w">
         <title>设计理念：</title>
-        <text>本案设计风格为主调新中式，在卧室空间里混搭了欧式元素，使空间在沿袭传统古典的同时兼容现代及西方典雅的装饰艺术。硬朗简洁的线条，使空间具有层次感，而独具古韵的东方元素又渲染出民族风情的精华，空间展现出霓裳轻舞的魅力感。</text>
+        <text>{{data.description}}</text>
     </view>
     <view class="content w mt40 border_t">
-        <image src="http://i.carimg.com/store/046/010/000/13457c7a205817a7.jpg"></image>
-        <text>错层设计使空间自然独立，客厅加入了硬朗及中性元素和温宁色调，层次分明简约而不显繁琐，大落地窗将室内外景观相连，现代风格的拼色沙发与中式圈椅混搭组合，展现新中式兼容魅力。</text>
-        <title>户型图：</title>
-        <image src="http://i.carimg.com/store/046/010/000/13457c7a205817a7.jpg"></image>
-        <text>错层设计使空间自然独立，客厅加入了硬朗及中性元素和温宁色调，层次分明简约而不显繁琐，大落地窗将室内外景观相连，现代风格的拼色沙发与中式圈椅混搭组合，展现新中式兼容魅力。</text>
-        <title>户型图：</title>
-        <image src="http://i.carimg.com/store/046/010/000/13457c7a205817a7.jpg"></image>
-        <text>错层设计使空间自然独立，客厅加入了硬朗及中性元素和温宁色调，层次分明简约而不显繁琐，大落地窗将室内外景观相连，现代风格的拼色沙发与中式圈椅混搭组合，展现新中式兼容魅力。</text>
+        <view wx:for="{{data.photo_list}}">
+            <image src="{{item.photo_url_m}}"></image>
+            <text>{{item.photo_des}}</text>
+        </view>
     </view>
 </view>
 <include src="../_view/footer.wxml"/>

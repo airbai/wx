@@ -25,6 +25,7 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    caseId:1000098 //案例ID 1000098 多张户型图 1000089 单张户型图 1000090 无户型图
   }
 })

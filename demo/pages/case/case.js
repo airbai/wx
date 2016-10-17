@@ -1,4 +1,5 @@
-Page( {
+var app=getApp();
+Page({
     data: {
         data:[],//数据
         hidden: true,//loading开关
@@ -44,12 +45,12 @@ Page( {
             hidden: false
         });
         wx.request( {
-            url: 'http://m.jiajuol.com/api/subject/subject_list.php',
+            url: 'http://m.jiajuol.com/partner/weixin/subject/subject_list.php',
             data: {
                 page:self.data.page,
-                house_type:4,
+                house_type:0,
                 house_style:0,
-                house_area:1
+                house_area:0
             },
             header: {
                 'Content-Type': 'application/json'
@@ -60,11 +61,19 @@ Page( {
             }
         })
     },
+    //加载更多
     getMore:function(){
         var self=this;
         self.data.page++;
         self.getData(function(d){
             self.dataFormat(d)
+        });
+    },
+    //跳转详情
+    goto:function(event){
+        app.globalData.caseId=event.currentTarget.dataset.gid;
+        wx.navigateTo({
+          url: '../case-detaile/detaile'
         });
     }
 })

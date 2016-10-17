@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/case/case",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/test/test"
+    "pages/case-detaile/detaile"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -18,14 +19,14 @@
       {
         "text":"首页",
         "pagePath":"pages/index/index",
-        "iconPath":"",
-        "selectedIconPath":""
+        "iconPath":"http://of171kc51.bkt.clouddn.com/ico2.png",
+        "selectedIconPath":"http://of171kc51.bkt.clouddn.com/ico1.png"
       },
       {
-        "text":"测试",
-        "pagePath":"pages/test/test",
-        "iconPath":"",
-        "selectedIconPath":""
+        "text":"案例",
+        "pagePath":"pages/case/case",
+        "iconPath":"http://of171kc51.bkt.clouddn.com/ico2.png",
+        "selectedIconPath":"http://of171kc51.bkt.clouddn.com/ico1.png"
       }
     ]
   }
