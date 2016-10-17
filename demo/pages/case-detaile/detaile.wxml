@@ -9,7 +9,7 @@
         <image class="pic" src="{{data.designer_face}}"></image>
         <text class="name pa">{{data.designer_name}}</text>
         <text class="des pa">主任设计师</text>
-        <button type="warn" size="mini" bindtap="yuyue" class="btn pa">预约装修</button>
+        <button type="warn" size="mini" bindtap="yuyue" class="btn pa" bindtap="yuyue">预约装修</button>
     </view>
 </view>
 <view class="detaile bg_f mt35 border_t border_b">

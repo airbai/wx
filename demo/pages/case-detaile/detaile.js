@@ -29,5 +29,10 @@ Page( {
                 });
             }
         })
+    },
+    yuyue:function(){
+        wx.navigateTo({
+           url: '../yuyue/yuyue'
+        });
     }
 })
