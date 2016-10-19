@@ -2,9 +2,11 @@ var app=getApp();
 Page({
     data: {
         data:[],//数据
-        hidden: true,//loading开关
+        loading:{
+            hidden:false,
+            txt:"加载中"
+        },
         disabled:false,//加载更多按钮状态
-        loading:false,//加载更多按钮loading
         page:1,//当前页码
         moreTxt:'点击加载更多'
     },
@@ -22,15 +24,19 @@ Page({
             if(d.data.data){
                 var datas=this.data.data.concat(d.data.data),flag=d.data.data.length<10;
                 this.setData({
-                    hidden: true,
+                    loading:{
+                        hidden:true,
+                    },
                     data:datas,
                     disabled:flag?true:false,
                     moreTxt:flag?"已加载全部数据":"点击加载更多"
                 });
             }else{
                 this.setData({
+                    loading:{
+                        hidden:true,
+                    },
                     disabled: true,
-                    hidden:true,
                     moreTxt:"已加载全部数据"
                 });  
             }
@@ -42,7 +48,9 @@ Page({
     getData:function(callback){
         var self = this;
         self.setData( {
-            hidden: false
+            loading:{
+                hidden:false,
+            }
         });
         wx.request( {
             url: 'http://m.jiajuol.com/partner/weixin/subject/subject_list.php',

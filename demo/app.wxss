@@ -1,4 +1,7 @@
 /**app.wxss**/
+image{background: #f5f5f5;}
+input,.picker{border:solid 1px #eee;background: #fff;padding:0.3rem;margin-top:0.5rem;height:1.4rem;line-height: 1.4rem;}
+
 page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: relative;min-height:100%;}
 
 /*宽度*/
@@ -38,6 +41,23 @@ page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: rel
 .border_t{border-top:solid 1px #eee;}
 .border_b{border-bottom: solid 1px #eee;}
 
+/*弹性盒模型*/
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.flex1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    box-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    display: block;
+}
+
 /*footer*/
-.footer_box{height:80px;line-height: 80px;}
+.footer_box{height:80px;line-height: 80px;margin-top:1rem;}
 .footer{font-size: 14px;bottom:0;width:20rem;}

@@ -1,4 +1,4 @@
-<include src="../_view/loading.wxml"/>
+<loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
 <view class="banner pr tc">
     <image class="pic" src="{{data.cover_img}}"></image>
     <text class="title pa">{{data.subject}}</text>

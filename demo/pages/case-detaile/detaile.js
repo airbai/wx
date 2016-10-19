@@ -1,7 +1,9 @@
 var app=getApp();
 Page( {
     data: {
-       hidden:true,
+        loading:{
+            hidden:false
+        }
     },
     onReady: function() {
         //初始化数据
@@ -11,7 +13,9 @@ Page( {
     getData:function(callback){
         var self = this;
         self.setData( {
-            hidden: false
+            loading:{
+                hidden:false
+            }
         });
         wx.request( {
             url: 'http://m.jiajuol.com/partner/weixin/subject/subject_info.php',
@@ -25,7 +29,9 @@ Page( {
                 console.log(res);
                 self.setData( {
                     data:res.data.data,
-                    hidden: true
+                    loading:{
+                        hidden:true
+                    }
                 });
             }
         })
