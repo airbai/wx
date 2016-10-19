@@ -65,6 +65,4 @@
 	<subtitle class="tc">精选品牌商家 劲爆底价服务不掉价</subtitle>
 	<image class="mt15" src="http://icon.carimg.com/m/0201/yuyue_text5.jpg"></image>
 </view>
-
-
-<include src="../_view/footer.wxml"/>
+<include src="../../template/footer.wxml"/>

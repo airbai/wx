@@ -11,4 +11,4 @@
     </view>
     <button type="warn" plain="true" disabled="{{disabled}}" bindtap="getMore" class="mt20">{{moreTxt}}</button>
 </view>
-<include src="../_view/footer.wxml"/>
+<include src="../../template/footer.wxml"/>

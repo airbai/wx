@@ -24,4 +24,4 @@
         </view>
     </view>
 </view>
-<include src="../_view/footer.wxml"/>
+<include src="../../template/footer.wxml"/>
