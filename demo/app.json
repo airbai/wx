@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/designer/designer",
     "pages/pic-detaile/detaile",
     "pages/pic/pic",
     "pages/case/case",

@@ -1,0 +1,5 @@
+<view>{{data.name}}</view>
+<view>{{data.description}}</view>
+<view>{{data.province_name}}</view>
+<view>{{data.city_name}}</view>
+
