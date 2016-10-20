@@ -8,6 +8,7 @@ Page({
         },
         modal:{
             hidden:true,
+            type:'warn',
             txt:''
         },
         province:null, //省份数据
@@ -106,6 +107,7 @@ Page({
             self.setData({
                 modal:{
                     hidden:false,
+                    type:"warn",
                     txt:"请输入您的称呼"
                 }
             });
@@ -115,6 +117,7 @@ Page({
             self.setData({
                 modal:{
                     hidden:false,
+                    type:"warn",
                     txt:"请输入手机号码"
                 }
             });
@@ -123,6 +126,7 @@ Page({
             self.setData({
                 modal:{
                     hidden:false,
+                    type:"warn",
                     txt:"手机号码格式不正确"
                 }
             });
@@ -132,6 +136,7 @@ Page({
             self.setData({
                 modal:{
                     hidden:false,
+                    type:"warn",
                     txt:"请输入小区名称"
                 }
             });
@@ -141,6 +146,7 @@ Page({
             self.setData({
                 modal:{
                     hidden:false,
+                    type:"warn",
                     txt:"请选择面积"
                 }
             });
@@ -150,6 +156,7 @@ Page({
             self.setData({
                 modal:{
                     hidden:false,
+                    type:"warn",
                     txt:"请选择装修预算"
                 }
             });
@@ -195,6 +202,7 @@ Page({
                         },
                         modal:{
                             hidden:false,
+                            type:"success",
                             txt:data.msg
                         },
                         userName:"",

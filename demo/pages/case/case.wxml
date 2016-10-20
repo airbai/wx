@@ -1,7 +1,7 @@
 <loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
 <view class="w">
     <view wx:for="{{data}}" class="case pr" bindtap="goto" data-gid="{{item.id}}">
-        <image class="pic" src="{{item.cover_img}}"></image>
+        <image class="pic" src="{{item.cover_img}}" mode="aspectFill"></image>
         <view class="title ellipsis">{{item.subject}}</view>
         <view class="tag ellipsis">{{item.type_name}} | {{item.area_name}} | {{item.house_price}}</view>
         <view class="headPic pa">
@@ -9,6 +9,8 @@
             <text class="ellipsis tc">{{item.designer_name}}</text>
         </view>
     </view>
-    <button type="warn" plain="true" disabled="{{disabled}}" bindtap="getMore" class="mt20">{{moreTxt}}</button>
+    <view wx:if="{{hasMore}}">
+        <button type="warn" plain="true" disabled="{{disabled}}" bindtap="getMore" class="mt20">{{moreTxt}}</button>
+    </view>
 </view>
 <include src="../../template/footer.wxml"/>

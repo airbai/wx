@@ -8,8 +8,8 @@ Page({
         },
         disabled:false,//加载更多按钮状态
         page:1,//当前页码
-        hasMore:false,//加载更多按钮
-        moreTxt:'点击加载更多'
+        moreTxt:'点击加载更多',
+        hasMore:false
     },
     onReady: function() {
         //初始化数据
@@ -23,7 +23,7 @@ Page({
         console.log( d.data );
         if(d.data.status=="1"){
             if(d.data.data){
-                var datas=this.data.data.concat(d.data.data),flag=d.data.data.length<10;
+                var datas=this.data.data.concat(d.data.data),flag=d.data.data.length<20;
                 this.setData({
                     loading:{
                         hidden:true,
@@ -56,12 +56,12 @@ Page({
             }
         });
         wx.request( {
-            url: 'http://m.jiajuol.com/partner/weixin/subject/subject_list.php',
+            url: 'http://m.jiajuol.com/partner/weixin/pic_list/pic_list.php',
             data: {
                 page:self.data.page,
-                house_type:0,
-                house_style:0,
-                house_area:0
+                style_id:0,
+                space_id:0,
+                section_id:0
             },
             header: {
                 'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ Page({
     goto:function(event){
         app.globalData.caseId=event.currentTarget.dataset.gid;
         wx.navigateTo({
-          url: '../case-detaile/detaile'
+          url: '../pic-detaile/detaile'
         });
     }
 })

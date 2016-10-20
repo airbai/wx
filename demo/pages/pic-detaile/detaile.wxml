@@ -1,0 +1,9 @@
+<loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
+<view wx:for="{{data}}" class="pic">
+    <image src="{{item.imgfile_l}}" mode="aspectFill"></image>
+    <view class="des">{{item.des}}</view>
+</view>
+<view class="w" wx:if="{{hasMore}}">
+	<button type="warn" plain="true" disabled="{{disabled}}" bindtap="getMore" class="mt20">{{moreTxt}}</button>
+</view>
+<include src="../../template/footer.wxml"/>

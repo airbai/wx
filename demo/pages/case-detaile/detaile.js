@@ -2,7 +2,8 @@ var app=getApp();
 Page( {
     data: {
         loading:{
-            hidden:false
+            hidden:false,
+            txt:"加载中"
         }
     },
     onReady: function() {
@@ -14,7 +15,8 @@ Page( {
         var self = this;
         self.setData( {
             loading:{
-                hidden:false
+                hidden:false,
+                txt:"加载中"
             }
         });
         wx.request( {

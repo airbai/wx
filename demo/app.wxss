@@ -1,11 +1,12 @@
 /**app.wxss**/
 image{background: #f5f5f5;}
 input,.picker{border:solid 1px #eee;background: #fff;padding:0.3rem;margin-top:0.5rem;height:1.4rem;line-height: 1.4rem;}
-
-page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: relative;min-height:100%;}
+modal text{padding:6px 0 0 6px;}
+.clearfix:after{content: '';clear: both;display: block;height:1px;}
+page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: relative;min-height:100%;box-sizing:border-box;}
 
 /*宽度*/
-.w{width:18.133rem;margin:0 auto;}
+.w{width:18rem;margin:0 auto;}
 
 /*定位*/
 .pr{position: relative;}

@@ -1,6 +1,6 @@
 <loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
 <view class="banner pr tc">
-    <image class="pic" src="{{data.cover_img}}"></image>
+    <image class="pic" src="{{data.cover_img}}" mode="aspectFill"></image>
     <text class="title pa">{{data.subject}}</text>
     <text class="tag pa">{{data.type_name}} | {{data.style_name}} | {{data.area}}平米 | {{data.price_name}}</text>
 </view>
@@ -19,7 +19,7 @@
     </view>
     <view class="content w mt40 border_t">
         <view wx:for="{{data.photo_list}}">
-            <image src="{{item.photo_url_m}}"></image>
+            <image src="{{item.photo_url_m}}" mode="aspectFill"></image>
             <text>{{item.photo_des}}</text>
         </view>
     </view>

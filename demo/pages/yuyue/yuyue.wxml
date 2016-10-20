@@ -1,5 +1,10 @@
 <loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
-<modal hidden="{{modal.hidden}}" bindconfirm="modalChange" bindcancel="modalChange" no-cancel>{{modal.txt}}</modal>
+<modal hidden="{{modal.hidden}}" bindconfirm="modalChange" bindcancel="modalChange" no-cancel>
+	<view class="box">
+		<icon type='{{modal.type}}' size='30'/>
+		<text class="flex1">{{modal.txt}}</text>
+	</view>
+</modal>
 
 <view class="banner pr tc">
 	<image class="pic" src="http://icon.carimg.com/m/0201/yuyue_bg2.jpg"></image>
@@ -33,7 +38,7 @@
 		</picker>
 	</view>
 
-	<button type="warn" size="{{warnSize}}" bindtap="yuyueSubmit" class="mt20">立即预约</button>
+	<button type="warn" bindtap="yuyueSubmit" class="mt20">立即预约</button>
 </view>
 
 

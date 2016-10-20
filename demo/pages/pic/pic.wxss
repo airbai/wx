@@ -1,0 +1,5 @@
+page{padding:0.58rem 0 50px;}
+.w2{width:20rem;padding-left:0.226rem;box-sizing: border-box;}
+.pic{height:11rem;width:8.773rem;float:left;margin-left:0.667rem;overflow: hidden;}
+.pic image{width:8.773rem;height:8.773rem;}
+
