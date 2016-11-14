@@ -1,11 +1,9 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/designer/designer",
-    "pages/pic-detaile/detaile",
+    "pages/case/list/list",
+    "pages/case/detaile/detaile",
     "pages/pic/pic",
-    "pages/case/case",
-    "pages/case-detaile/detaile",
+    "pages/designer/designer",
     "pages/yuyue/yuyue"
   ],
   "window":{
@@ -16,26 +14,20 @@
   },
   "tabBar":{
     "color":"#fff",
-    "selectedColor":"#1aad16",
+    "selectedColor":"#d81e06",
     "backgroundColor":"#000",
     "list":[
       {
-        "text":"首页",
-        "pagePath":"pages/index/index",
-        "iconPath":"http://of171kc51.bkt.clouddn.com/ico2.png",
-        "selectedIconPath":"http://of171kc51.bkt.clouddn.com/ico1.png"
-      },
-      {
         "text":"案例",
         "pagePath":"pages/case/case",
-        "iconPath":"http://of171kc51.bkt.clouddn.com/ico2.png",
-        "selectedIconPath":"http://of171kc51.bkt.clouddn.com/ico1.png"
+        "iconPath":"img/case.png",
+        "selectedIconPath":"img/case1.png"
       },
       {
         "text":"图库",
         "pagePath":"pages/pic/pic",
-        "iconPath":"http://of171kc51.bkt.clouddn.com/ico2.png",
-        "selectedIconPath":"http://of171kc51.bkt.clouddn.com/ico1.png"
+        "iconPath":"img/pic.png",
+        "selectedIconPath":"img/pic1.png"
       }
     ]
   }

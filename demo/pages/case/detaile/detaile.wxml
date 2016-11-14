@@ -18,7 +18,7 @@
         <text>{{data.description}}</text>
     </view>
     <view class="content w mt40 border_t">
-        <view wx:for="{{data.photo_list}}">
+        <view wx:for="{{data.photo_list}}" wx:key="photo_id">
             <image src="{{item.photo_url_m}}" mode="aspectFill"></image>
             <text>{{item.photo_des}}</text>
         </view>

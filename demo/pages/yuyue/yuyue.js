@@ -1,5 +1,6 @@
 var cityData=require('../../js/city.js');
 var $=require('../../js/util.js');
+var app=getApp();
 Page({
     data: {
         loading:{
@@ -31,18 +32,11 @@ Page({
             }
         });
     },
-    modalChange:function(){
-        this.setData({
-            modal:{
-                hidden:true,
-            }
-        })
-    },
     //获取面积、预算
     getAreaPrice:function(){
         var self=this;
          wx.request({
-            url: 'http://m.jiajuol.com/partner/weixin/common/condition_list.php',
+            url:app.api.condition,
             data: {
                 type:"area-price"
             },
@@ -100,66 +94,37 @@ Page({
             price_index:e.detail.value
         });
     },
+    alert:function(t){
+        wx.showModal({
+            content:t,
+            showCancel: false,
+            confirmColor: '#000'
+        });
+    },
     // 提交预约
     yuyueSubmit:function(){
         var self=this;
         if(!self.data.userName){
-            self.setData({
-                modal:{
-                    hidden:false,
-                    type:"warn",
-                    txt:"请输入您的称呼"
-                }
-            });
-            return
+            self.alert('请输入您的称呼');
+            return;
         }
         if(!self.data.userPhone){
-            self.setData({
-                modal:{
-                    hidden:false,
-                    type:"warn",
-                    txt:"请输入手机号码"
-                }
-            });
+            self.alert('请输入手机号码');
             return
         }else if(!/^1[3|5|8|7]\d{9}$/.test(self.data.userPhone)){
-            self.setData({
-                modal:{
-                    hidden:false,
-                    type:"warn",
-                    txt:"手机号码格式不正确"
-                }
-            });
+            self.alert('手机号码格式不正确');
             return
         }
         if(!self.data.xiaoqu){
-            self.setData({
-                modal:{
-                    hidden:false,
-                    type:"warn",
-                    txt:"请输入小区名称"
-                }
-            });
+            self.alert('请输入小区名称');
             return
         }
         if(!self.data.area.id[self.data.area_index]){
-            self.setData({
-                modal:{
-                    hidden:false,
-                    type:"warn",
-                    txt:"请选择面积"
-                }
-            });
+            self.alert('请选择面积');
             return
         }
         if(!self.data.price.id[self.data.price_index]){
-            self.setData({
-                modal:{
-                    hidden:false,
-                    type:"warn",
-                    txt:"请选择装修预算"
-                }
-            });
+            self.alert('请选择装修预算');
             return
         }
         self.setData({
@@ -176,7 +141,7 @@ Page({
         // console.log('面积：'+self.data.area.id[self.data.area_index])
         // console.log('预算：'+self.data.price.id[self.data.price_index])
         wx.request({
-            url: 'http://www.jiajuol.com/api/0200/crm_apply.php',
+            url: app.api.yuyue,
             data: {
                 name:self.data.userName,
                 phone:self.data.userPhone,
@@ -200,11 +165,6 @@ Page({
                         loading:{
                             hidden:true
                         },
-                        modal:{
-                            hidden:false,
-                            type:"success",
-                            txt:data.msg
-                        },
                         userName:"",
                         userPhone:"",
                         xiaoqu:"",
@@ -217,13 +177,10 @@ Page({
                     self.setData({
                         loading:{
                             hidden:true
-                        },
-                        modal:{
-                            hidden:false,
-                            txt:data.msg
                         }
                     });
                 }
+                self.alert(data.msg);
             }
         })
     },

@@ -20,7 +20,7 @@ Page( {
             }
         });
         wx.request( {
-            url: 'http://m.jiajuol.com/partner/weixin/subject/subject_info.php',
+            url:app.api.subjectInfo,
             data: {
                 subject_id:app.globalData.caseId
             },
@@ -39,8 +39,6 @@ Page( {
         })
     },
     yuyue:function(){
-        wx.navigateTo({
-           url: '../yuyue/yuyue'
-        });
+        app.yuyue();
     }
 })

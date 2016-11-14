@@ -2,15 +2,10 @@ var app=getApp();
 Page({
     data: {
         data:[],//数据
-        loading:{
-            hidden:false,
-            txt:"加载中"
-        },
         disabled:false,//加载更多按钮状态
         page:1,//当前页码
         hasMore:false,//加载更多按钮
         moreTxt:'点击加载更多'
-
     },
     onReady: function() {
         //初始化数据
@@ -18,27 +13,28 @@ Page({
         this.getData(function(d){
             self.dataFormat(d)
         });
+        wx.getNetworkType({
+            success: function(res) {
+                var networkType = res.networkType // 返回网络类型2g，3g，4g，wifi
+                // console.log(networkType);
+            }
+        })
     },
     //数据处理
     dataFormat:function(d){
         console.log( d.data );
         if(d.data.status=="1"){
             if(d.data.data){
-                var datas=this.data.data.concat(d.data.data),flag=d.data.data.length<20;
+                var datas=this.data.data.concat(d.data.data),flag=d.data.data.length<10;
                 this.setData({
-                    loading:{
-                        hidden:true,
-                    },
                     data:datas,
                     disabled:flag?true:false,
                     moreTxt:flag?"已加载全部数据":"点击加载更多",
                     hasMore:true
                 });
+
             }else{
                 this.setData({
-                    loading:{
-                        hidden:true,
-                    },
                     disabled: true,
                     moreTxt:"已加载全部数据"
                 });  
@@ -46,30 +42,37 @@ Page({
         }else{
             console.log('接口异常！')
         }
+        wx.hideToast();
     },
     //加载数据
     getData:function(callback){
         var self = this;
-        self.setData( {
-            loading:{
-                hidden:false,
-                txt:"加载中"
-            }
+        wx.showToast({
+          title: '加载中...',
+          icon: 'loading',
+          duration:10000
         });
         wx.request( {
-            url: 'http://m.jiajuol.com/partner/weixin/pic_list/pic_list.php',
+            url:app.api.subjectList,
             data: {
                 page:self.data.page,
-                style_id:0,
-                space_id:0,
-                section_id:0
+                house_type:0,
+                house_style:0,
+                house_area:0
             },
             header: {
                 'Content-Type': 'application/json'
             },
             success: function( res ) {
                 callback(res)
+                console.log('成功拉拉！！！！！！')
                 // self.dataFormat(res);
+            },
+            error:function(){
+                console.log('失败啦！！！')
+            },
+            fail:function(){
+                console.log('error!!!!!!!!!!!!!!')
             }
         })
     },
@@ -79,6 +82,20 @@ Page({
         self.data.page++;
         self.getData(function(d){
             self.dataFormat(d)
+        });
+    },
+    //跳转案例详情
+    goToDetaile:function(event){
+        app.globalData.caseId=event.currentTarget.dataset.gid;
+        wx.navigateTo({
+          url: '../detaile/detaile'
+        });
+    },
+    //跳转设计师详情
+    goToDesigner:function(event){
+        app.globalData.designerId=event.currentTarget.dataset.did;
+        wx.navigateTo({
+          url: '../designer/designer'
         });
     }
 })

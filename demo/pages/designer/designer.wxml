@@ -1,5 +1,34 @@
-<view>{{data.name}}</view>
-<view>{{data.description}}</view>
-<view>{{data.province_name}}</view>
-<view>{{data.city_name}}</view>
+<view class="banner pr tc">
+  <image class="pic" src="http://icon.carimg.com/m/0201/sjs_bg.jpg" mode="aspectFill"></image>
+  <image class="head pa" src="http://i.carimg.com/store/273/083/000/91357205e6455287.jpg" mode="aspectFill"></image>
+  <text class="name pa full">王涛</text>
+  <text class="address pa full">山西 太原</text>
+  <text class="price pa full">设计收费: <text>80元/㎡</text></text>
+</view>
 
+<view class="box tc service_bar ">
+  <text class="flex1" bindtap="yuyue">预约装修</text>
+  <text class="flex1" bindtap="makePhoneCall" data-tel="4009230798">电话咨询</text>
+</view>
+
+<view class="box tc tab_bar mt15">
+  <text class="flex1{{tab.tab1?' active':''}}" data-index="1" bindtap="tab">案例作品</text>
+  <text class="flex1{{tab.tab2?' active':''}}" data-index="2" bindtap="tab">Ta的简介</text>
+</view>
+
+
+<view hidden="{{tab.tab2}}">
+  <view class="w">
+    <view wx:for="{{data.subject_list}}" wx:key="id" class="case pr" bindtap="goto" data-gid="{{item.id}}">
+        <image class="pic" src="{{item.title_img}}" mode="aspectFill"></image>
+        <view class="title ellipsis">{{item.subject_name}}</view>
+        <view class="tag ellipsis">{{item.house_type_name}} | {{item.style_name}} | {{item.area_name}} | {{item.price_name}}</view>
+    </view>
+  </view>
+</view>
+<view class="bg_f mt15 jianjie" hidden="{{tab.tab1}}">
+  {{data.description}}
+</view>
+
+
+<include src="../../template/footer.wxml"/>

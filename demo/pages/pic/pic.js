@@ -8,8 +8,9 @@ Page({
         },
         disabled:false,//加载更多按钮状态
         page:1,//当前页码
-        moreTxt:'点击加载更多',
-        hasMore:false
+        hasMore:false,//加载更多按钮
+        moreTxt:'点击加载更多'
+
     },
     onReady: function() {
         //初始化数据
@@ -56,7 +57,7 @@ Page({
             }
         });
         wx.request( {
-            url: 'http://m.jiajuol.com/partner/weixin/pic_list/pic_list.php',
+            url:app.api.picList,
             data: {
                 page:self.data.page,
                 style_id:0,
@@ -78,13 +79,6 @@ Page({
         self.data.page++;
         self.getData(function(d){
             self.dataFormat(d)
-        });
-    },
-    //跳转详情
-    goto:function(event){
-        app.globalData.caseId=event.currentTarget.dataset.gid;
-        wx.navigateTo({
-          url: '../pic-detaile/detaile'
         });
     }
 })

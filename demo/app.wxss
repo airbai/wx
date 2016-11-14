@@ -7,6 +7,7 @@ page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: rel
 
 /*宽度*/
 .w{width:18rem;margin:0 auto;}
+.full{width:100%;}
 
 /*定位*/
 .pr{position: relative;}
@@ -60,5 +61,5 @@ page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: rel
 }
 
 /*footer*/
-.footer_box{height:80px;line-height: 80px;margin-top:1rem;}
+.footer_box{height:80px;width:20rem;line-height: 80px;margin-top:1rem;}
 .footer{font-size: 14px;bottom:0;width:20rem;}
