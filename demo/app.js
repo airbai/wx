@@ -3,7 +3,7 @@ App({
 	// 接口地址
 	api:{
 		yuyue:"https://www.jiajuol.com/api/0200/crm_apply.php",//提交预约
-		condition:"https://api.jiajuol.com/partner/weixin/common/condition_list.php",//提交页面 获取面积、预算
+		condition:"https://api.jiajuol.com/partner/weixin/common/condition_list.php",//条件
 		subjectList:"https://api.jiajuol.com/partner/weixin/subject/subject_list.php",//案例列表
 		subjectInfo:"https://api.jiajuol.com/partner/weixin/subject/subject_info.php",//案例详情
 		designerInfo:"https://m.jiajuol.com/partner/weixin/designer/designer_info.php",//设计师详情
@@ -31,7 +31,7 @@ App({
 	//跳转预约页面
 	yuyue:function(){
         wx.navigateTo({
-           url: '../yuyue/yuyue'
+           url: '/pages/yuyue/yuyue'
         });
     },
     // 全局变量

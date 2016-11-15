@@ -1,4 +1,3 @@
-<loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
 <view class="banner pr tc">
     <image class="pic" src="{{data.cover_img}}" mode="aspectFill"></image>
     <text class="title pa">{{data.subject}}</text>

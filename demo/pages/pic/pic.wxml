@@ -1,4 +1,3 @@
-<loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
 <view wx:for="{{data}}" class="pic">
     <image src="{{item.imgfile_l}}" mode="aspectFill"></image>
     <view class="des">{{item.des}}</view>

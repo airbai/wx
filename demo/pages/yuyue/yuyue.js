@@ -3,15 +3,6 @@ var $=require('../../js/util.js');
 var app=getApp();
 Page({
     data: {
-        loading:{
-            hidden:false,
-            txt:"加载中"
-        },
-        modal:{
-            hidden:true,
-            type:'warn',
-            txt:''
-        },
         province:null, //省份数据
         province_index: 0, //当前选中省份索引
         city:null, //城市数据
@@ -25,12 +16,6 @@ Page({
         //初始化数据
         this.getProvince();
         this.getAreaPrice();
-        // 关闭loading
-        this.setData({
-            loading:{
-                hidden:true
-            }
-        });
     },
     //获取面积、预算
     getAreaPrice:function(){
@@ -127,11 +112,10 @@ Page({
             self.alert('请选择装修预算');
             return
         }
-        self.setData({
-            loading:{
-                hidden:false,
-                txt:'提交中'
-            }
+        wx.showToast({
+          title: '提交中...',
+          icon: 'loading',
+          duration:10000
         });
         // console.log('您的称呼：'+self.data.userName)
         // console.log('您的手机：'+self.data.userPhone)
@@ -162,9 +146,6 @@ Page({
                 var data=JSON.parse(res.data.replace(/(\(|\))/g,''));
                 if(data.status==200){
                     self.setData({
-                        loading:{
-                            hidden:true
-                        },
                         userName:"",
                         userPhone:"",
                         xiaoqu:"",
@@ -173,13 +154,8 @@ Page({
                         area_index:0,
                         price_index:0
                     });
-                }else{
-                    self.setData({
-                        loading:{
-                            hidden:true
-                        }
-                    });
                 }
+                wx.hideToast();
                 self.alert(data.msg);
             }
         })

@@ -2,10 +2,6 @@ var app=getApp();
 Page({
     data: {
         data:[],//数据
-        loading:{
-            hidden:false,
-            txt:"加载中"
-        },
         disabled:false,//加载更多按钮状态
         page:1,//当前页码
         hasMore:false,//加载更多按钮
@@ -26,9 +22,6 @@ Page({
             if(d.data.data){
                 var datas=this.data.data.concat(d.data.data),flag=d.data.data.length<20;
                 this.setData({
-                    loading:{
-                        hidden:true,
-                    },
                     data:datas,
                     disabled:flag?true:false,
                     moreTxt:flag?"已加载全部数据":"点击加载更多",
@@ -36,13 +29,11 @@ Page({
                 });
             }else{
                 this.setData({
-                    loading:{
-                        hidden:true,
-                    },
                     disabled: true,
                     moreTxt:"已加载全部数据"
                 });  
             }
+            wx.hideToast();
         }else{
             console.log('接口异常！')
         }
@@ -50,11 +41,10 @@ Page({
     //加载数据
     getData:function(callback){
         var self = this;
-        self.setData( {
-            loading:{
-                hidden:false,
-                txt:"加载中"
-            }
+        wx.showToast({
+          title: '加载中...',
+          icon: 'loading',
+          duration:10000
         });
         wx.request( {
             url:app.api.picList,

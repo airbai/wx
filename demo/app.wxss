@@ -6,7 +6,7 @@ modal text{padding:6px 0 0 6px;}
 page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: relative;min-height:100%;box-sizing:border-box;}
 
 /*宽度*/
-.w{width:18rem;margin:0 auto;}
+.w{width:680rpx;margin:0 auto;}
 .full{width:100%;}
 
 /*定位*/
@@ -27,14 +27,14 @@ page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: rel
 .tr{text-align: right;}
 
 /*间距*/
-.mt5{margin-top: 0.133rem;}
-.mt10{margin-top: 0.267rem;}
-.mt15{margin-top: 0.4rem;}
-.mt20{margin-top: 0.533rem;}
-.mt25{margin-top: 0.667rem;}
-.mt30{margin-top: 0.8rem;}
-.mt35{margin-top: 0.933rem;}
-.mt40{margin-top: 1.067rem;}
+.mt5{margin-top: 5rpx;}
+.mt10{margin-top: 10rpx;}
+.mt15{margin-top: 15rpx;}
+.mt20{margin-top: 20rpx;}
+.mt25{margin-top: 25rpx;}
+.mt30{margin-top: 30rpx;}
+.mt35{margin-top: 35rpx;}
+.mt40{margin-top: 40rpx;}
 
 /*背景*/
 .bg_f{background: #fff}
@@ -61,5 +61,10 @@ page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: rel
 }
 
 /*footer*/
-.footer_box{height:80px;width:20rem;line-height: 80px;margin-top:1rem;}
-.footer{font-size: 14px;bottom:0;width:20rem;}
+.footer_box{height:60px;width:750rpx;line-height: 60px;margin-top:20rpx;}
+.footer{font-size: 12px;bottom:0;width:750rpx;}
+
+/*无结果提示*/
+.null{margin-top: 100rpx}
+.null .txt1{color:#000;font-size:38rpx;margin-top: 20rpx;}
+.null .txt2{font-size:30rpx;}

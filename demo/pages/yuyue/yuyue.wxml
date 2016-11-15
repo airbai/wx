@@ -1,11 +1,3 @@
-<loading hidden="{{loading.hidden}}">{{loading.txt}}...</loading>
-<!-- <modal hidden="{{modal.hidden}}" bindconfirm="modalChange" bindcancel="modalChange" no-cancel>
-	<view class="box">
-		<icon type='{{modal.type}}' size='30'/>
-		<text class="flex1">{{modal.txt}}</text>
-	</view>
-</modal> -->
-
 <view class="banner pr tc">
 	<image class="pic" src="http://icon.carimg.com/m/0201/yuyue_bg2.jpg"></image>
 	<text class="title pa">互联网装修建材一站式平台</text>

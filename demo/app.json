@@ -8,26 +8,26 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#ff4049",
+    "navigationBarBackgroundColor": "#e64340",
     "navigationBarTitleText": "家居在线",
     "navigationBarTextStyle":"#fff"
   },
   "tabBar":{
     "color":"#fff",
-    "selectedColor":"#d81e06",
+    "selectedColor":"#e64340",
     "backgroundColor":"#000",
     "list":[
       {
         "text":"案例",
-        "pagePath":"pages/case/case",
-        "iconPath":"img/case.png",
-        "selectedIconPath":"img/case1.png"
+        "pagePath":"pages/case/list/list",
+        "iconPath":"images/case.png",
+        "selectedIconPath":"images/case1.png"
       },
       {
         "text":"图库",
         "pagePath":"pages/pic/pic",
-        "iconPath":"img/pic.png",
-        "selectedIconPath":"img/pic1.png"
+        "iconPath":"images/pic.png",
+        "selectedIconPath":"images/pic1.png"
       }
     ]
   }
