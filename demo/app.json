@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/case/list/list",
+    "pages/designer/designer",
     "pages/case/detaile/detaile",
     "pages/pic/pic",
-    "pages/designer/designer",
     "pages/yuyue/yuyue"
   ],
   "window":{

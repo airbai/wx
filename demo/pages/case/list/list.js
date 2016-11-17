@@ -9,7 +9,7 @@ Page({
         tab:[true,true,true],
         disabled:false,//加载更多按钮状态
         page:1,//当前页码
-        hasMore:true,//加载更多按钮
+        hasMore:false,//加载更多按钮
         moreTxt:'点击加载更多',
         dataNull:true
     },
@@ -101,7 +101,8 @@ Page({
                     data:datas,
                     disabled:flag?true:false,
                     moreTxt:flag?"已加载全部数据":"点击加载更多",
-                    hasMore:true
+                    hasMore:true,
+                    dataNull:true
                 });
 
             }else{

@@ -10,7 +10,10 @@ Page({
         area:null,//面积 
         area_index:0,
         price:null,//预算
-        price_index:0
+        price_index:0,
+        userName:'',
+        userPhone:'',
+        xiaoqu:''
     },
     onReady: function() {
         //初始化数据
@@ -81,6 +84,7 @@ Page({
     },
     alert:function(t){
         wx.showModal({
+            title:"系统提示",
             content:t,
             showCancel: false,
             confirmColor: '#000'

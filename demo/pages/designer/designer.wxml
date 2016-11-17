@@ -1,9 +1,9 @@
 <view class="banner pr tc">
   <image class="pic" src="http://icon.carimg.com/m/0201/sjs_bg.jpg" mode="aspectFill"></image>
-  <image class="head pa" src="http://i.carimg.com/store/273/083/000/91357205e6455287.jpg" mode="aspectFill"></image>
-  <text class="name pa full">王涛</text>
-  <text class="address pa full">山西 太原</text>
-  <text class="price pa full">设计收费: <text>80元/㎡</text></text>
+  <image class="head pa" src="{{data.avatar}}" mode="aspectFill"></image>
+  <text class="name pa full">{{data.name}}</text>
+  <text class="address pa full">{{data.province_name}} {{data.city_name}}</text>
+  <text class="price pa full">设计收费: <text>{{data.price}}元/㎡</text></text>
 </view>
 
 <view class="box tc service_bar ">

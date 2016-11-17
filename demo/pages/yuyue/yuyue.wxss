@@ -13,4 +13,4 @@
 .content .box .t1{margin-top:1rem;}
 .content .box1{line-height: 4.2rem;}
 .content .flex1{height:4.2rem;background: #eee;background-size:cover;}
-.content image{width:100%;height:10rem;}
+.content image{width:680rpx;height:376rpx;}
