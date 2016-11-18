@@ -3,7 +3,7 @@ App({
 	// 接口地址
 	api:{
 		yuyue:"https://api.jiajuol.com/partner/crm_apply.php",//提交预约
-		condition:"https://api.jiajuol.com/partner/weixin/common/condition_list.php",//条件
+		condition:"https://api.jiajuol.com/partner/weixin/common/condition_list.php",//条件   'all' => '全部','style' => '风格','space' => '空间','housetype' => '户型','area' => '面积','price' => '预算','section' => '局部'
 		subjectList:"https://api.jiajuol.com/partner/weixin/subject/subject_list.php",//案例列表
 		subjectInfo:"https://api.jiajuol.com/partner/weixin/subject/subject_info.php",//案例详情
 		designerInfo:"https://api.jiajuol.com/partner/weixin/designer/designer_info.php",//设计师详情

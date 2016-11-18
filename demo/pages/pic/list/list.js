@@ -151,6 +151,10 @@ Page({
         // console.log(e);
         app.globalData.picData={
             data:this.data.data,
+            page:this.data.page,
+            space_id:this.data.space_id,
+            style_id:this.data.section_id,
+            section_id:this.data.section_id,
             current:e.currentTarget.dataset.index
         }
         wx.navigateTo({
