@@ -5,7 +5,7 @@
     </swiper-item>
   </block>
 </swiper>
-
+<view class="swiper-num">{{current}}/{{data.length}}</view>
 <view class="swiper-text">
 	<view wx:for="{{data}}" hidden="{{index!=current}}" data-id="{{index}}">{{item.des}}</view>
 </view>

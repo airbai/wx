@@ -19,7 +19,7 @@ Page({
         app.globalData.picData=null;
     },
     swiperChange: function(e) {
-        console.log(e.detail.current)
+        // console.log(e.detail.current)
         this.setData({
             current:e.detail.current
         })
