@@ -19,7 +19,7 @@
 
 <view class="w">
 <!--<view class="case pr">
-        <image class="pic"data-gid="1000102"mode="aspectFill"src="http://i1.carimg.com/0/photo/012/085/000/1715820348a92783.jpg!hmm"></image>
+        <image class="pic"data-gid="1000102" mode="aspectFill" src="http://i1.carimg.com/0/photo/012/085/000/1715820348a92783.jpg!hmm"></image>
         <view class="title ellipsis">波普两居 明悦和煦</view>
         <view class="tag ellipsis">二居室 | 120平米以下 | 20万左右</view>
     </view>-->
