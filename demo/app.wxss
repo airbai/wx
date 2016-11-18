@@ -43,6 +43,10 @@ page{background:#fafafa;font-size:14px;color:#666;line-height: 1.5;position: rel
 .border_t{border-top:solid 1px #eee;}
 .border_b{border-bottom: solid 1px #eee;}
 
+/*浮动*/
+.fl{float:left;}
+.fr{float:right;}
+
 /*弹性盒模型*/
 .box {
     display: -webkit-box;

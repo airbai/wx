@@ -5,9 +5,9 @@
 </view>
 <view class="sjs_bar mt35 bg_f border_t border_b">
     <view class="w pr">
-        <image class="pic" src="{{data.designer_face}}"></image>
-        <text class="name pa">{{data.designer_name}}</text>
-        <text class="des pa">主任设计师</text>
+        <image class="pic" src="{{data.designer_face}}" bindtap="goToDesigner"></image>
+        <text class="name pa" bindtap="goToDesigner">{{data.designer_name}}</text>
+        <text class="des pa" bindtap="goToDesigner">主任设计师</text>
         <button type="warn" size="mini" bindtap="yuyue" class="btn pa" bindtap="yuyue">预约装修</button>
     </view>
 </view>
@@ -17,7 +17,7 @@
         <text>{{data.description}}</text>
     </view>
     <view class="content w mt40 border_t">
-        <view wx:for="{{data.photo_list}}" wx:key="photo_id">
+        <view wx:for="{{data.photo_list}}" wx:key="" bindtap="picDetaile" data-index="{{index}}">
             <image src="{{item.photo_url_m}}" mode="aspectFill"></image>
             <text>{{item.photo_des}}</text>
         </view>

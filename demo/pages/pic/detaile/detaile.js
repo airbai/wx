@@ -11,7 +11,7 @@ Page({
         console.log(app.globalData.picData);
         this.setData({
             data:app.globalData.picData.data,
-            current:app.globalData.picData.current
+            current:Number(app.globalData.picData.current)
         })
     },
     onUnload:function(){

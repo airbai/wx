@@ -1,8 +1,8 @@
 {
   "pages":[
+    "pages/case/list/list",
     "pages/pic/list/list",
     "pages/pic/detaile/detaile",
-    "pages/case/list/list",
     "pages/designer/designer",
     "pages/case/detaile/detaile",
     "pages/yuyue/yuyue"
