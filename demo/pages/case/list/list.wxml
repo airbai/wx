@@ -30,7 +30,7 @@
         <view class="title ellipsis">{{item.subject}}</view>
         <view class="tag ellipsis">{{item.type_name}} | {{item.area_name}} | {{item.house_price}}</view>
         <view class="headPic pa" bindtap="goToDesigner" data-did="{{item.designerid}}">
-            <image src="{{item.cover_img}}"></image>
+            <image src="{{item.designer_face}}"></image>
             <text class="ellipsis tc">{{item.designer_name}}</text>
         </view>
     </view>
