@@ -5,7 +5,8 @@
     "pages/pic/detaile/detaile",
     "pages/designer/designer",
     "pages/case/detaile/detaile",
-    "pages/yuyue/yuyue"
+    "pages/yuyue/tip/tip",
+    "pages/yuyue/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -32,7 +33,7 @@
       },
       {
         "text":"预约",
-        "pagePath":"pages/yuyue/yuyue",
+        "pagePath":"pages/yuyue/index/index",
         "iconPath":"images/yuyue.png",
         "selectedIconPath":"images/yuyue1.png"
       }

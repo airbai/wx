@@ -32,11 +32,14 @@ Page( {
         })
     },
     yuyue:function(){
-        app.yuyue();
+        wx.navigateTo({
+          url: '../../yuyue/index/index'
+        });
     },
     //跳转设计师详情
     goToDesigner:function(){
         app.globalData.designerId=this.data.data.designerid
+        
         wx.navigateTo({
           url: '../../designer/designer'
         });

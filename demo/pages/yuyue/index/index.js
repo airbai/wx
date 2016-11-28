@@ -1,15 +1,15 @@
-var cityData=require('../../js/city.js');
-var $=require('../../js/util.js');
+var cityData=require('../../../js/city.js');
+var $=require('../../../js/util.js');
 var app=getApp();
 Page({
     data: {
-        province:null, //省份数据
+        // province:null, //省份数据
         province_index: 0, //当前选中省份索引
-        city:null, //城市数据
+        // city:null, //城市数据
         city_index: 0, //当前选中的城市索引
-        area:null,//面积 
+        // area:null,//面积 
         area_index:0,
-        price:null,//预算
+        // price:null,//预算
         price_index:0,
         userName:'',
         userPhone:'',
@@ -148,6 +148,7 @@ Page({
             },
             success: function( res ) {
                 var data=JSON.parse(res.data.replace(/(\(|\))/g,''));
+                wx.hideToast();
                 if(data.status==200){
                     self.setData({
                         userName:"",
@@ -158,9 +159,12 @@ Page({
                         area_index:0,
                         price_index:0
                     });
+                    wx.navigateTo({
+                        url:"../tip/tip"
+                    });
+                }else{
+                    self.alert(data.msg);
                 }
-                wx.hideToast();
-                self.alert(data.msg);
             }
         })
     },

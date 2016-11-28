@@ -28,12 +28,6 @@ App({
 			})
 		}
 	},
-	//跳转预约页面
-	yuyue:function(){
-        wx.navigateTo({
-           url: '/pages/yuyue/yuyue'
-        });
-    },
     // 全局变量
 	globalData: {
 		caseId: 1000098, //案例ID 1000098 多张户型图 1000089 单张户型图 1000090 无户型图
